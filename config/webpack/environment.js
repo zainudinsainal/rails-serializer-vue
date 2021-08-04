@@ -9,7 +9,7 @@ const customConfig = {
     alias: {
       "@": path.resolve(__dirname, "..", "..", "app/javascript/src")
     }
-  }
+  },
 }
 
 environment.config.merge(customConfig)

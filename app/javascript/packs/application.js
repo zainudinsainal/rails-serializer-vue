@@ -3,14 +3,14 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import Rails from "@rails/ujs"
+// import Rails from "@rails/ujs"
 // import Turbolinks from "turbolinks"
-import * as ActiveStorage from "@rails/activestorage"
-import "channels"
+// import * as ActiveStorage from "@rails/activestorage"
+// import "channels"
 
-Rails.start()
+// Rails.start()
 // Turbolinks.start()
-ActiveStorage.start()
+// ActiveStorage.start()
 
 /* eslint no-console: 0 */
 // Run this example by adding <%= javascript_pack_tag 'hello_vue' %> (and
