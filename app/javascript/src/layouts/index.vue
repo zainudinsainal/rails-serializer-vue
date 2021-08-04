@@ -1,7 +1,10 @@
 <template>
-  <div id="app">
+  <div>
+    <h1>Test</h1>
+
     <p>{{ message }}</p>
   </div>
+
 </template>
 
 <script>

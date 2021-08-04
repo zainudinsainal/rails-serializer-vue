@@ -9,6 +9,28 @@ const customConfig = {
     alias: {
       "@": path.resolve(__dirname, "..", "..", "app/javascript/src")
     }
+  },
+  optimization: {
+    minimize: true,
+    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all',
+      maxInitialRequests: Infinity,
+      minSize: 30000,
+      cacheGroups: {
+        // @see https://hackernoon.com/the-100-correct-way-to-split-your-chunks-with-webpack-f8a9df5b7758
+        defaultVendors: {
+          reuseExistingChunk: true,
+          test: /[\\/]node_modules[\\/]/,
+          name(module) {
+            const name = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/);
+            const packageName = (name !== null) ? name[1] : ''
+            return `npm.${packageName.replace('@', '')}`;
+          },
+          priority: 10,
+        },
+      }
+    }
   }
 }
 
