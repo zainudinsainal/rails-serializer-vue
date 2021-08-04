@@ -11,7 +11,7 @@
 import { ref } from 'vue'
 
 export default {
-  name: 'index',
+  name: 'pages',
   setup() {
     const message = ref('Hello World. testing')
     return {
